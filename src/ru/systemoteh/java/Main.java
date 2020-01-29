@@ -135,5 +135,9 @@ public class Main {
             String key = entry.getKey();
             Object value = entry.getValue();
         }
+
+        SortedMap<String, Object> treeMap = new TreeMap<>();
+        treeMap.firstKey();
+        treeMap.lastKey();
     }
 }
