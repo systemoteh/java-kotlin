@@ -137,6 +137,7 @@ public class Main {
         }
 
         SortedMap<String, Object> treeMap = new TreeMap<>();
+        treeMap.put("First", new Object());
         treeMap.firstKey();
         treeMap.lastKey();
     }
