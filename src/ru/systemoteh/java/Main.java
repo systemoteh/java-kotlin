@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         dataTypes();            // типы данных
         controlStructures();    // управляющие конструкции
-        arrays();               // массивы
         loops();                // циклы
+        arrays();               // массивы
         collections();          // коллекции
         maps();                 // карты
     }
@@ -64,23 +64,6 @@ public class Main {
         }
     }
 
-    private static void arrays() {
-
-        int[] ints = new int[3]; // size
-        ints[0] = 1;
-        ints[1] = 2;
-        ints[2] = 3;
-
-        String[] strings = {"one", "two", "three"};
-        String three = strings[2];
-
-        String printedArray = Arrays.toString(ints);
-
-        char[][] chars = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
-        chars[0][0] = 'A';
-        chars[1][1] = 'E';
-    }
-
     private static void loops() {
 
         for (int i = 0; i < 10; i++) {
@@ -105,6 +88,22 @@ public class Main {
         while (j < 10);
     }
 
+    private static void arrays() {
+
+        int[] ints = new int[3]; // size
+        ints[0] = 1;
+        ints[1] = 2;
+        ints[2] = 3;
+
+        String[] strings = {"one", "two", "three"};
+        String three = strings[2];
+
+        String printedArray = Arrays.toString(ints);
+
+        char[][] chars = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
+        chars[0][0] = 'A';
+        chars[1][1] = 'E';
+    }
 
     private static void collections() {
 

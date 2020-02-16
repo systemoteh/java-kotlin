@@ -1,12 +1,12 @@
 package ru.systemoteh.kotlin
 
 fun main() {
-    dataTypes();            // типы данных
-    controlStructures();    // управляющие конструкции
-    arrays();               // массивы
-//    loops();                // циклы
-//    collections();          // коллекции
-//    maps();                 // карты
+    dataTypes()            // типы данных
+    controlStructures()    // управляющие конструкции
+    loops()                // циклы
+    arrays()               // массивы
+//    collections()          // коллекции
+//    maps()                 // карты
 }
 
 fun dataTypes() {
@@ -58,6 +58,32 @@ fun controlStructures() {
     }
 }
 
+fun loops() {
+
+    for (i in 1..5) {
+        // logic here
+    }
+
+    for(i in 10 downTo 1 step 2){
+        // logic here
+    }
+
+    repeat(3){
+        // logic here
+    }
+
+    var i = 0
+    while (i < 10) {
+        // logic here
+        i++
+    }
+
+    do {
+        // logic here
+        i++
+    } while (i < 10)
+}
+
 fun arrays() {
 
     val intArray = intArrayOf(1, 3, 5)
@@ -68,8 +94,12 @@ fun arrays() {
     val isContains = intArray.contains(3) // true
 
     val stringArray = arrayOf("one", "two", "three")
+
     var i = 0
     stringArray.forEach { stringArray[i++] = it + "some" }
+    for (index in stringArray.indices){
+        intArray[index] = index * 3
+    }
 
     var stringArrayOfNull = arrayOfNulls<String>(3) // [null, null, null]
 
