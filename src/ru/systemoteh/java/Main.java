@@ -14,10 +14,10 @@ public class Main {
 
     private static void dataTypes() {
 
-        byte var01 = 0;     // 8 bit { -128 .. 127 }
-        short var02 = 0;    // 16 bit { -32768 .. 32767 }
-        int var03 = 0;      // 32 bit { -2147483648 .. 2147483647 }
-        long var04 = 0L;    // 64 bit { -9223372036854775808L .. 9223372036854775807L }
+        byte var01 = 0;         // 8 bit { -128 .. 127 }
+        short var02 = 0;        // 16 bit { -32768 .. 32767 }
+        int var03 = 0;          // 32 bit { -2147483648 .. 2147483647 }
+        long var04 = 0L;        // 64 bit { -9223372036854775808L .. 9223372036854775807L }
         float var05 = 0.0f;
         double var06 = 0.0d;
 
