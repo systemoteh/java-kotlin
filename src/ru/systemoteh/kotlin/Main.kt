@@ -5,7 +5,7 @@ fun main() {
     controlStructures()    // управляющие конструкции
     loops()                // циклы
     arrays()               // массивы
-//    collections()          // коллекции
+    collections()          // коллекции
 //    maps()                 // карты
 }
 
@@ -64,11 +64,11 @@ fun loops() {
         // logic here
     }
 
-    for(i in 10 downTo 1 step 2){
+    for (i in 10 downTo 1 step 2) {
         // logic here
     }
 
-    repeat(3){
+    repeat(3) {
         // logic here
     }
 
@@ -97,7 +97,7 @@ fun arrays() {
 
     var i = 0
     stringArray.forEach { stringArray[i++] = it + "some" }
-    for (index in stringArray.indices){
+    for (index in stringArray.indices) {
         intArray[index] = index * 3
     }
 
@@ -107,4 +107,35 @@ fun arrays() {
     var printArray = letters.contentToString()
 
     var emptyArrayString = emptyArray<String>() // size can never change
+}
+
+fun collections() {
+
+    val immutableList = listOf(1, 2, 3)     // never can change
+    val mutableList = mutableListOf("one", "two", "three")  // can change
+    mutableList.add("four")
+    val readOnlyList = mutableList.toList() // never can change
+    val stringArrayList = arrayListOf("One", "Two")
+
+    val intArray = intArrayOf(1, 2, 3, 4, 5)
+    val intList: List<Int> = intArray.toList()
+
+    val num00 = intList.get(0)                       // 1
+    val num01 = intList.indexOf(1)                   // 2
+    val num02 = intList.lastIndexOf(3)       // 2
+    val num03 = intList.first()                      // 1
+    val num04 = intList.last()                       // 5
+    val num05 = intList.size                         // 5
+    val num06 = intList.contains(4)              // true
+    val num07 = intList.elementAt(1)           // 2
+    val num08 = intList.elementAtOrElse(8) { 0 } // 0
+    val num09 = intList.elementAtOrNull(9)    // null
+
+    for (elem in intList) {
+//        print(elem)
+    }
+
+    val stringHashSet = hashSetOf("a", "b", "c")
+
+    val emptyList: List<String> = emptyList()
 }
