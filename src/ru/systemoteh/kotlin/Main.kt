@@ -6,7 +6,7 @@ fun main() {
     loops()                // циклы
     arrays()               // массивы
     collections()          // коллекции
-//    maps()                 // карты
+    maps()                 // карты
 }
 
 fun dataTypes() {
@@ -138,4 +138,40 @@ fun collections() {
     val stringHashSet = hashSetOf("a", "b", "c")
 
     val emptyList: List<String> = emptyList()
+}
+
+fun maps() {
+
+    val unmodifiableMap = mapOf("one" to 1, "two" to 2, "three" to 3)
+    val value01 = unmodifiableMap["one"]
+    val value02 = unmodifiableMap.getValue("two")
+    val entries = unmodifiableMap.entries
+    val keys = unmodifiableMap.keys
+    for((key, value) in unmodifiableMap){
+//        println("Key is $key, value is $value")
+    }
+
+    val modifiableMap = mutableMapOf("One" to 1, "Two" to 2, "Three" to 3)
+    modifiableMap["Four"] = 4
+    modifiableMap.remove("Four", 4)
+    modifiableMap += "Five" to 5
+    modifiableMap.putAll(unmodifiableMap)
+    modifiableMap.mapValues { it.value.dec() }
+
+    val hashMap: Map<String, String> = hashMapOf(
+        "one" to "value one",
+        "two" to "value two",
+        "three" to "value three"
+    )
+
+    val linkedMap: java.util.LinkedHashMap<String, String> =
+        linkedMapOf("NG" to "Nigeria","AU" to "Australia","CA" to "Canada")
+    linkedMap["NA"] = "Namibia"
+    linkedMap.remove("AU")
+    linkedMap["CA"]     // Canada
+
+    val sortedMap: java.util.SortedMap<Int, String> =
+        sortedMapOf(2 to "two", 1 to "one", 3 to "three")
+    sortedMap[7] = "seven"
+    sortedMap.remove(3)
 }
