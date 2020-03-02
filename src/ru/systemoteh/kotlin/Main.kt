@@ -15,7 +15,7 @@ fun dataTypes() {
 
     val var01: Byte = 0         // 8 bit { -128 .. 127 }
     val var02: Short = 0        // 16 bit { -32768 .. 32767 }
-    val var03: Int = 0          // 32 bit { -2147483648 .. 2147483647 }
+    val var03: Int = 0          // 32 bit { -2_147_483_648 .. 2_147_483_647 }
     val var04: Long = 0L        // 64 bit { -9223372036854775808L .. 9223372036854775807L }
     val var05: Float = 0.0f
     val var06: Double = 0.0
@@ -37,6 +37,8 @@ fun controlStructures() {
     } else {
         val min = num
     }
+
+    val ternary = if (num > 0) "yes" else "no"
 
     val string = "one"
     num = when (string) {
@@ -92,6 +94,7 @@ fun arrays() {
     val max = intArray.max()
     val min = intArray.min()
     val isContains = intArray.contains(3) // true
+    intArray.sort()
 
     val stringArray = arrayOf("one", "two", "three")
 
